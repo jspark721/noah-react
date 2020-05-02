@@ -1,7 +1,9 @@
 node_modules
 .cache/
-dist/
+dist/*
+!dist/index.html
 .env
 .DS_Store
 coverage/
 .vscode/
+*.log

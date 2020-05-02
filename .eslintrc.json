@@ -1,6 +1,10 @@
 {
-  "extends": ["eslint:recommended", "prettier", "prettier/react"],
-  "plugins": [],
+  "rules": {},
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -8,9 +12,10 @@
       "jsx": true
     }
   },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  }
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["react"]
 }

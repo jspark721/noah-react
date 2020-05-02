@@ -3,16 +3,39 @@
   "version": "1.0.0",
   "description": "Noah Valve Actuation, Inc website built with React ",
   "main": "index.js",
+  "author": "Julie Park",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production",
+    "start": "webpack-dev-server --hot --mode development"
   },
-  "author": "Julie Park",
-  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21"
+  },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@hot-loader/react-dom": "^16.13.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
-    "prettier": "^2.0.5"
+    "file-loader": "^6.0.0",
+    "node-sass": "^4.14.0",
+    "prettier": "^2.0.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
