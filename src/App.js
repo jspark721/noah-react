@@ -2,19 +2,20 @@ import 'react-hot-loader';
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Router, Link } from '@reach/router';
-import About from './About';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Homepage from './Homepage';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          Go to <Link to='/about'>About</Link>!
-        </h1>
-
-        <Router>
-          <About path='/about' />
-        </Router>
+        <Header />
+        <Homepage />
+        <div className='floating-btn'>
+          <button className='btn btn-cta'>Request for Price Quote</button>
+        </div>
+        <Footer />
       </div>
     );
   }

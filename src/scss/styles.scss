@@ -3,4 +3,156 @@
 body {
   background: $light-gray;
   font-family: $opensans;
+  margin: 0;
+  color: $black;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.btn {
+  padding: 12px;
+  border: 1px solid $blue;
+  cursor: pointer;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: $lato;
+  font-weight: 700;
+  text-shadow: none;
+  outline: 0;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+.btn-cta {
+  background: $blue;
+  color: $white;
+  border-radius: 5px;
+  line-height: 1.5em;
+  &:hover {
+    background: darken($blue, 5%);
+    border: 1px solid darken($blue, 5%);
+    border-radius: 5px;
+  }
+}
+.floating-btn {
+  position: fixed;
+  border-radius: 5px;
+  bottom: 30px;
+  right: 30px;
+  width: 150px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+//Header
+#header {
+  width: 100%;
+  height: 100px;
+  background: $white;
+  margin: 0;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+.menu-icon {
+  width: 30px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  // p {
+  //   text-transform: uppercase;
+  //   font-family: $lato;
+  //   font-size: 0.7rem;
+  //   letter-spacing: 2px;
+  //   margin-top: 33px;
+  //   margin-left: 3px;
+  // }
+}
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background: $blue;
+}
+.top {
+  top: 40%;
+}
+.bottom {
+  top: 60%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  p {
+    line-height: 0.8em;
+    text-align: right;
+    font-size: 1.5em;
+    color: $blue;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-family: $lato;
+    span {
+      font-weight: 300;
+      font-size: 0.6em;
+      letter-spacing: 5px;
+      margin: 0;
+      line-height: 0.8em;
+    }
+  }
+}
+
+//menu open
+#menu {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  max-width: 700px;
+  min-width: 400px;
+  height: 100vh;
+  background: $blue;
+  transform: translate3d(-100vw, 0, 0);
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+
+  ul {
+    list-style-type: none;
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+  li {
+    font-size: 1.7em;
+    padding: 0.5em 0;
+    a {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-family: $lato;
+      font-weight: 900;
+    }
+  }
+  .hide {
+    transform: translate3d(-100vw, 0, 0);
+  }
+  .show {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+  }
+}
+
+//Homepage
+#homepage {
+  width: 100vw;
+  height: 100vh;
+  background: $light-gray;
 }
