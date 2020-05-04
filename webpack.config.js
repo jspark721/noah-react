@@ -23,6 +23,7 @@ const config = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: /scss/,
       },
       {
         test: /\.svg$/,

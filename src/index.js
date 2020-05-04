@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './styles.scss';
+import './scss/styles.scss';
 
-var mountNode = document.getElementById('app');
-ReactDOM.render(<App name='Julie' />, mountNode);
+ReactDOM.render(<App />, document.getElementById('app'));
